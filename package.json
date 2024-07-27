@@ -1,0 +1,32 @@
+{
+  "name": "snel-app",
+  "version": "1.0.0",
+  "description": "Une application de communication pour la SNEL",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolenge/snel-app.git"
+  },
+  "keywords": [
+    "snel"
+  ],
+  "author": "Dev Artefact <contact@devartefact.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bolenge/snel-app/issues"
+  },
+  "homepage": "https://github.com/bolenge/snel-app#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
