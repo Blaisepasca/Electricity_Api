@@ -9,11 +9,12 @@ dotenv.config();
 const app = express();
 const port = process.env.APP_PORT
 
+// Configuration des vues
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// Chargement des routes
 const pageRouter = require('./routes/page.routes')
-
 app.use('/', pageRouter)
 
 // Lancement du serveur
