@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const DepartmentSchema = new mongoose.Schema({
-    name:{
+    name: {
         type: String ,
         required: true ,
         trim: true ,
@@ -10,43 +10,19 @@ const DepartmentSchema = new mongoose.Schema({
         max: 255 ,
 
     },
-    missionStatement:{
-        type: String ,
-        required: true ,
-        trim : true ,
-        unique : true ,
-        min : 3 ,
-        max : 1000 ,
-
-    },
-    objectives: {
-        type: [String], // Array of strings
-        required: false ,
-    },
-    roles: {
-          type: String,
-          required: true,
-          trim: true,
-          min: 3,
-          max: 255
-    },
-    responsibilities: {
-            type: [String], // Array of strings
-            required: false
-    },
-    employees: [{
+    description: {
+        type: String,
+        required: true,
+        trim: true,
+        min: 10,
+        max: 1024
+      },
+    employees: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Users',
         required: false
-    }],
-    budget: {
-        type: Number,
-        required: false
     },
-    establishedDate: {
-        type: Date,
-        required: false
-    }
+    
            
 });
  
